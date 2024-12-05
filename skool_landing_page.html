@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automation HQ</title>
+  
+<style>
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.9;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333333;
+  color: white;
+  padding: 10px 20px;
+}
+
+nav .menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav .menu li {
+  margin: 0 10px;
+}
+
+nav .menu li a {
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav .menu li a:hover {
+  color: #ff6f61;
+}
+
+nav .search-bar {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+nav .user-profile {
+  font-size: 24px;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.hero .cta-button {
+  background: #ff6f61;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.hero .cta-button:hover {
+  background: #ff3d3d;
+  transform: scale(1.05);
+}
+
+/* Course Categories Section */
+.course-categories {
+  padding: 40px 20px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.course-categories h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.course-categories .categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.course-categories .card {
+  background: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Featured Courses Section */
+.featured-courses {
+  display: grid;
+  justify-items: center;
+  padding: 40px 20px;
+}
+
+.featured-courses h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.featured-courses .carousel {
+  display: flex;
+  overflow-x: auto;
+}
+
+.featured-courses .card {
+  background: #f9f9f9;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.08);
+  width: 300px;
+}
+
+.featured-courses .card button {
+  background: #ff6f61;
+  color: white;
+  margin-top: 10px;
+}
+
+/* Why Join Us Section */
+.why-join {
+  padding: 40px 20px;
+  background: #ffffff;
+}
+
+.why-join h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.why-join .benefits {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.why-join .benefit {
+  margin: 10px;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 8px;
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 40px 20px;
+  background: #e9ecef;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.testimonials .carousel {
+  display: flex;
+  overflow-x: auto;
+}
+
+.testimonials .card {
+  margin: 10px;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  width: 300px;
+  text-align: center;
+}
+
+/* Instructors Section */
+.instructors {
+  padding: 40px 20px;
+  background: #ffffff;
+}
+
+.instructors h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.instructors .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.instructors .card {
+  margin: 10px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+}
+
+.instructors .card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Community Section */
+.community {
+  padding: 40px 20px;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+.community h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.community button {
+  background: #ff6f61;
+  color: white;
+  font-weight: bold;
+}
+
+/* Footer Section */
+footer {
+  padding: 20px;
+  background: #222222;
+  color: white;
+  text-align: center;
+}
+
+footer .footer-links {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+footer .footer-links a {
+  color: white;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+footer .social-media {
+  margin-bottom: 10px;
+}
+
+footer .newsletter input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+footer .newsletter button {
+  background: #ff6f61;
+  color: white;
+  font-weight: light;
+}
+
+#notion_form{
+  display:grid;
+  padding: 0;
+  margin: 0;
+  justify-items: center;
+}
+#courses {
+  display:grid;
+  padding: 0;
+  margin: 0;
+  justify-items: center;
+}
+iframe {
+  padding: 0;
+  margin: 0;
+  border: none;
+  scroll-behavior: auto;
+}
+</style>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="logo">Community Logo</div>
+    <ul class="menu">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="https://www.skool.com/automation-hq/about">Community</a></li>
+      <li><a href="mailto:scmclimitedllc@gmail.com">Contact</a></li>
+    </ul>
+    <input type="text" placeholder="Search courses" class="search-bar">
+    <div class="user-profile">😎</div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Unlock Your Potential with AI and ML Courses</h1>
+    <p>Join ML Engineers - Automation HQ and master the skills of the future.</p>
+    <a href="https://www.skool.com/automation-hq"> <button class="cta-button">🎯 Explore Courses</button></a>
+  </section>
+
+  <!-- Course Categories Section -->
+  <section id="courses" class="course-categories">
+    <h2>Browse Our Course Categories</h2>
+    <div class="categories">
+      <div class="card">📚 Machine Learning Fundamentals</div>
+      <div class="card">🤖 Advanced AI Techniques</div>
+      <div class="card">📊 Data Analysis and Visualization</div>
+      <div class="card">⚙️ Automation and Robotics</div>
+      <div class="card">🌐 Ethical AI and Responsible Innovation</div>
+    </div>
+  </section>
+
+  <!-- Featured Courses Section -->
+  <section class="featured-courses">
+    <h2>Featured Courses</h2>
+    <div class="carousel">
+      <div class="card">
+        <h3>Course Title 1</h3>
+        <p>Instructor: John Doe</p>
+        <p>Learn the basics of AI and ML.</p>
+        <a href="https://www.skool.com/automation-hq/about"><button>🎓 Enroll Now</button></a>
+      </div>
+      <div class="card">
+        <h3>Course Title 2</h3>
+        <p>Instructor: Jane Smith</p>
+        <p>Advanced techniques for professionals.</p>
+        <a href="https://www.skool.com/automation-hq/about"><button>🎓 Enroll Now</button></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Join Us Section -->
+  <section class="why-join">
+    <h2>Why Join ML Engineers - Automation HQ?</h2>
+    <div class="benefits">
+      <div class="benefit">🌟 Expert Instructors</div>
+      <div class="benefit">📘 Interactive Learning</div>
+      <div class="benefit">🤝 Community Support</div>
+      <div class="benefit">📅 Flexible Learning</div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Members Need</h2>
+    <div id="notion_form" class="carousel">
+      <div class="card">
+        <p>"Use this Notion form to send me a notice on my mobile phone so I can get to work on what you want to see!"</p>
+        <p>- Omar M. (ML Engineer)</p>
+      </div>
+      <div class="card">
+        <iframe src=""></iframe>
+      </div>
+    </div>
+  </section> 
+
+  <!-- Instructors Section -->
+  <section id="about" class="instructors">
+    <h2>Meet Our Instructor</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="instructor1.jpg" alt="Instructor 1">
+        <h3>Omar Morales</h3>
+        <p>Expert in automated workflows, full-code, no-code, low-code, arificial intelligence and machine learning solutions.</p>
+        <div class="social-links">
+          <a href="#">Notion Page</a> | <a href="#">LinkedIn</a>
+        </div>
+      </div>
+  </section>
+
+  <!-- Community Section -->
+  <section id="community" class="community">
+    <h2>Join Our Thriving Community</h2>
+    <p>Collaborate, learn, and grow with like-minded professionals.</p>
+    <a href="https://www.skool.com/automation-hq/about"><button>🤝 Join the Community</button></a>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#about">About</a>
+      <a href="https://www.skool.com/automation-hq/about">Community</a>
+      <a href="mailto:scmclimitedllc@gmail.com">Contact</a>
+      <!-- <a href="#privacy">Privacy Policy</a> -->
+    </div>
+    <!-- <div class="social-media">
+      <a href="#">CodePen</a>
+      <a href="#">Skool</a>
+      <a href="#">LinkedIn</a>
+    </div> -->
+    <!-- <div class="newsletter">
+      <input type="email" placeholder="Enter your email">
+      <button>Drop your email. Stay in the loop.</button>
+    </div> -->

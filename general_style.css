@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.9;
+    line-height: 1.35;
   }
   
   a {
@@ -33,11 +33,12 @@ body {
   /* Navigation Bar */
   nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background: #333333;
     color: white;
-    padding: 10px 20px;
+    padding: 1.54%;
+    justify-content: space-between;
+
   }
   
   nav .menu {
@@ -45,6 +46,9 @@ body {
     list-style: none;
     margin: 0;
     padding: 0;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    
   }
   
   nav .menu li {
@@ -358,6 +362,7 @@ body {
     font-stretch: expanded;
     color: #6a11cb;
     font-style: italic;
+    justify-content: center;
     font-weight: bolder;
     background-color: #ccc;
     opacity: 60%;

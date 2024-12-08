@@ -362,7 +362,8 @@ body {
     font-stretch: expanded;
     color: #6a11cb;
     font-style: italic;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     font-weight: bolder;
     background-color: #ccc;
     opacity: 60%;

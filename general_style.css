@@ -90,10 +90,18 @@ body {
   }
   
   .hero .cta-button {
+    transition: transform 0.3s ease;
     background: #ff6f61;
     color: white;
-    font-weight: bold;
-    transition: transform 0.3s ease;
+    font-weight: light;
+    font-stretch: expanded;
+    font-style: italic;
+    font-weight: bolder;
+    border-style: none;
+    border-radius: 5cqmax;
+    padding: 2%;
+    border-style: ridge;
+    border-color: aquamarine;
   }
   
   .hero .cta-button:hover {
@@ -268,7 +276,15 @@ body {
   .community button {
     background: #ff6f61;
     color: white;
-    font-weight: bold;
+    font-weight: light;
+    font-stretch: expanded;
+    font-style: italic;
+    font-weight: bolder;
+    border-style: none;
+    border-radius: 5cqmax;
+    padding: 2%;
+    border-style: ridge;
+    border-color: aquamarine;
   }
   
   /* Footer Section */
@@ -305,6 +321,13 @@ body {
     background: #ff6f61;
     color: white;
     font-weight: light;
+    font-stretch: expanded;
+    font-style: italic;
+    font-weight: bolder;
+    opacity: 60%;
+    border-style: none;
+    border-radius: 5cqmax;
+    padding: 2%;
   }
   
   #notion_form{
@@ -324,4 +347,21 @@ body {
     margin: 0;
     border: none;
     scroll-behavior: auto;
+  }
+
+  .style_link {
+    color: aquamarine;
+    font-style: italic;
+  }
+
+  .style_emphasis {
+    font-stretch: expanded;
+    color: #6a11cb;
+    font-style: italic;
+    font-weight: bolder;
+    background-color: #ccc;
+    opacity: 60%;
+    border-style: none;
+    border-radius: 5cqmax;
+    padding: 2%;
   }
